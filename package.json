@@ -1,0 +1,31 @@
+{
+  "name": "altitude-application",
+  "version": "1.0.0",
+  "description": "back-end for the altitude-app",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/urielbitton/Altitude-backend.git"
+  },
+  "author": "vivek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/urielbitton/Altitude-backend/issues"
+  },
+  "homepage": "https://github.com/urielbitton/Altitude-backend#readme",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "body-parser": "^1.19.0",
+    "config": "^3.3.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.22"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
