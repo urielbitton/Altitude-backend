@@ -5,6 +5,13 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const config = require('config');
 const projectRouter = require('./routes/projects');
+const userRouter = require('./routes/users');
+const authRouter = require('./routes/auth');
+
+if(!config.get('jwtPrivateKey')){
+    console.error("FATAL ERROR - jwtPrivateKey is not defined");
+    process.exit(1);
+}
 
 const db = config.get('db');
 const port = 4000 || process.env.PORT;
@@ -23,5 +30,7 @@ app.listen(port,(req,res)=>{
 app.use(cors());
 app.use(bodyParser.json());
 app.use('/projects',projectRouter);
+app.use('/users',userRouter);
+app.use('/auth',authRouter);
 
 
